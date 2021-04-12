@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <global-header>
-    </global-header>
+    <global-header></global-header>
   </div>
 </template>
 
