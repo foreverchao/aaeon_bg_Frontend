@@ -16,8 +16,9 @@
 </template>
 
 <script>
+//import axios from 'axios'
 const userInfo = {
-  emailAddr: "1111@test.com.tw" ,
+  emailAddr: "111@test.com.tw" ,
   passWord: "1"
 }
 export default {
@@ -43,6 +44,13 @@ export default {
     },
     Login() {
       if (this.password == userInfo.passWord && this.email == userInfo.emailAddr){
+          /*const Auth = axios.create({
+          baseURL: "https://aaeonbackend.azurewebsites.net/auth/"
+          })
+
+          Auth.post("/login",{password: "1",email: "111@test.com.tw"}).then((res) => {
+          console.log(res.data.data.tokenData.token)});*/
+
           this.$router.push("/Home");
       }
       else if (this.password == "" || this.email == ""){
